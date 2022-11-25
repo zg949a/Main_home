@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+}
+
+/* background start */
+.top{
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    height: 850px;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    /* background:url(https://images.pexels.com/photos/1400136/pexels-photo-1400136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); */
+    animation: move 30s linear infinite;
+    -webkit-animation: move 30s linear infinite;
+    /* move：动画名称。infinite：代表执行次数，这里指无限次 */
+
+}
+@keyframes move {
+    0%{
+    background: url(../img/diy_1.jpg) no-repeat;
+  	background-size:100% 100%;
+  	}
+    20%{
+    background: url(../img/diy_2.jpg) no-repeat;
+  	background-size:100% 100%;
+  }
+    40%{
+  	background: url(../img/diy_5.jpg) no-repeat;
+  	background-size:100% 100%; 
+  	}
+    60%{
+    background: url(../img/diy_7.jpg) no-repeat;
+  	background-size:100% 100%;
+  }
+    80%{
+  	background: url(../img/diy_6.jpg) no-repeat;
+  	background-size:100% 100%; 
+  	} 
+    100%{
+  	background: url(../img/diy_1.jpg) no-repeat;
+  	background-size:100% 100%; 
+  	} 
+}
+@-webkit-keyframes  move {
+    0%{
+    background: url(../img/diy_1.jpg) no-repeat;
+  	background-size:100% 100%;
+  	}
+    20%{
+    background: url(../img/diy_2.jpg) no-repeat;
+  	background-size:100% 100%;
+  }
+    40%{
+  	background: url(../img/diy_5.jpg) no-repeat;
+  	background-size:100% 100%; 
+  	}
+    60%{
+    background: url(../img/diy_7.jpg) no-repeat;
+  	background-size:100% 100%;
+  }
+    80%{
+  	background: url(../img/diy_6.jpg) no-repeat;
+  	background-size:100% 100%; 
+  	} 
+    100%{
+  	background: url(../img/diy_1.jpg) no-repeat;
+  	background-size:100% 100%; 
+  	} 
+}
+/* background end */
+
+.head{
+    position:absolute;
+    left: 160px;
+    top: 90px;
+    height: 90px;
+    width: 1200px;
+    background-color: #bbb;
+    margin: auto;
+}
+.head >span.iconfont.icon-taobaolianmeng{
+    font-size: 4em;
+    line-height: 30px;
+}
+span.one{
+    font-size: 3em;
+    line-height: 30px;
+}
+.inner{
+    padding: 30px;
+    margin: auto;
+    position: absolute;
+    right: 100px;
+    top: 90px;
+    /* background-color: #bbb; */
+}
+.inner >span{
+    margin: 30px;
+    font-size: 1.6em;
+    color: rgb(81, 81, 81) ;
+}
+
+
+.main{
+    margin-top: 10px;
+    width: 100%;;
+    background:url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    height: 300em;
+
+
+}
