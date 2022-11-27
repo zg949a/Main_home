@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    /* 元素的总宽度和高度包含内边框和内边距 */
+}
 body{
     margin: 0;
 }
@@ -199,6 +203,127 @@ ul, ol{
 .sub_nav_item ol>li>a:hover{
     color: #1972ea;
 }
+.head_right{
+    background-color: rgba(195, 181, 195, 0.721);
+    width:  54px;
+    height: auto;
+    position: absolute;
+    margin: 0;
+    top: 200px;
+    right: 0;
+    border-radius: 15px 0 0 15px;
+    /* display: flex; */
+}
+.bottom_span{
+    margin: 20px 3px 10px 10px;
+    transition: 0.5s;
+}
+.bottom_span span{
+    color:blueviolet;
+    font-size: 2em;
+    /* z-index: 3; */
+}
+.bottom_span:hover{
+    transform: scale(2);
+    box-shadow: 0 5px 5px rgb(52, 47, 52);
+}
+
+.head_bottom{
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* 居中 */
+    /* 渐变背景 */
+    /* background: linear-gradient(200deg,#e7f0fd,#accbee); */
+    position: absolute;
+    bottom: 110px;
+    left: 200px;
+    display: flex;
+    flex-direction: row;
+    /* 横向排列 */
+    flex-wrap: wrap;
+    /* 允许换行 */
+}
+.head_bottom .box{
+    position: relative;
+    width: 275px;
+    height: 275px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.head_bottom .box:hover{
+    transform: scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* 确保首先显示 */
+}
+.head_bottom .box .img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.head_bottom .box .img.img::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to top,#222,transparent);
+    /* 渐变遮罩 */
+    opacity: 0;
+    transition: 0.5s;
+}
+.head_bottom .box:hover .img::before{
+    opacity: 1;
+}
+.head_bottom .box .img img{
+    position: absolute;
+    left: 9;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 保持原比例，裁剪多余 */
+}
+.head_bottom .box .text{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    /* display: flex; */
+    align-items: flex-end;
+    /* 位于容器尾部显示 */
+    color: #fff;
+    z-index: 2;
+}
+.head_bottom .box .text h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    transform: translateY(400px);
+    /* 默认移除可视范围 */
+    transition: 0.5s;
+}
+.head_bottom .box:hover .text h2{
+    transform: translateY(80px);
+    transition-delay: 0.3s;
+}
+.head_bottom .box .text p{
+    font-size: 13px;
+    line-height: 20px;
+    transform: translateY(400px);
+    /* 默认移除可视范围 */
+    transition: 0.5s;
+}
+.head_bottom .box:hover .text p{
+    transform: translateY(90px);
+    transition-delay: 0.4s;
+}
+
 
 .main{
     margin-top: 10px;
