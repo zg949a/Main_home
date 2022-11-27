@@ -94,20 +94,25 @@ ul, ol{
 .inner{
     /* padding: 10px 0 10px 10px; */
     flex: 1;
+    display: flex;
     margin: auto;
     position: absolute;
     right: 10px;
     top: 4px;
-    transition: 1s;
 }
-.inner >span{
+.inner div{
+    transition: 0.5s;
+}
+.inner div>span{
     margin: 30px 0 30px 60px;
+    display: flex;
     font-size: 1.8em;
     color: rgb(81, 81, 81) ;
 }
-.inner >span:hover{
-    transform: scale(1.8);
+.inner div:hover{
+    transform: scale(1.5);
 }
+
 
 .head_button{
     position: relative;
@@ -143,6 +148,7 @@ ul, ol{
     width: 200px;
     height: 90px;
     font-size: 1.5em;
+    display: flex;
     /* background-color: #1972ea; */
     flex: 1 1;
     /* 平均分布 */
@@ -157,10 +163,14 @@ ul, ol{
 .input_right ul>li>a:hover{
     color: #1972ea;
 }
-.input_right ul>li>span{
+.input_right ul>li>.span{
+    padding-bottom: 3px;
     color: #333;
+    transition: 0.5s;
 }
-
+.input_right ul>li:hover .span{
+    transform: rotatex(90deg);
+}
 .input_right ul>li:hover .sub_nav_div{
     display: flex;
 }
