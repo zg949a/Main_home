@@ -83,7 +83,6 @@ ul, ol{
     top: 110px;
     height: 90px;
     width: 1200px;
-    /* background-color: #bbb; */
     margin: auto;
 }
 .head>span{
@@ -93,17 +92,21 @@ ul, ol{
     line-height: 40px;
 }
 .inner{
-    padding: 10px 0 10px 10px;
+    /* padding: 10px 0 10px 10px; */
+    flex: 1;
     margin: auto;
     position: absolute;
-    right: 1px;
-    top: 1px;
-    /* background-color: #bbb; */
+    right: 10px;
+    top: 4px;
+    transition: 1s;
 }
 .inner >span{
     margin: 30px 0 30px 60px;
     font-size: 1.8em;
     color: rgb(81, 81, 81) ;
+}
+.inner >span:hover{
+    transform: scale(1.8);
 }
 
 .head_button{
@@ -113,9 +116,7 @@ ul, ol{
     height: 70px;
     width: 1200px;
     display: flex;
-    /* opacity: 0.8; */
     border-radius: 5px;
-    /* overflow: hidden; */
 }
 .head_button input{
     width: 400px;
@@ -139,16 +140,19 @@ ul, ol{
     display: flex;
 }
 .input_right ul>li{
+    width: 200px;
+    height: 90px;
     font-size: 1.5em;
+    /* background-color: #1972ea; */
     flex: 1 1;
     /* 平均分布 */
-    /* margin-right: 2em; */
 }
 .input_right ul>li:last-child{
     margin-right: 0;
 }
 .input_right ul>li>a{
     color: #333;
+    /* transition: 1s; */
 }
 .input_right ul>li>a:hover{
     color: #1972ea;
@@ -156,6 +160,7 @@ ul, ol{
 .input_right ul>li>span{
     color: #333;
 }
+
 .input_right ul>li:hover .sub_nav_div{
     display: flex;
 }
