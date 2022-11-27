@@ -112,13 +112,20 @@ ul, ol{
     margin: auto;
     height: 70px;
     width: 1200px;
-    background-color: antiquewhite;
     display: flex;
+    /* opacity: 0.8; */
+    border-radius: 5px;
+    /* overflow: hidden; */
 }
 .head_button input{
     width: 400px;
     height: 100%;
     border: 0;
+    padding: 0 20px;
+    font-size: 1.2em;
+    float: left;
+    opacity: 0.6;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 .input_right{
@@ -126,6 +133,7 @@ ul, ol{
     height: 100%;
     background-color: blueviolet;
     position: relative;
+    border-radius: 5px 0 0 5px;
 }
 .input_right ul{
     display: flex;
