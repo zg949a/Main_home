@@ -2,6 +2,11 @@
     box-sizing: border-box;
     /* 元素的总宽度和高度包含内边框和内边距 */
 }
+input,button{
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
 body{
     margin: 0;
 }
@@ -84,16 +89,17 @@ ul, ol{
 .head{
     position:absolute;
     left: 160px;
-    top: 110px;
+    top: 60px;
     height: 90px;
     width: 1200px;
     margin: auto;
+    display: flex;
 }
-.head>span{
+.head .head_left span{
     padding-left: 2px;
     color: rgb(81, 81,  81);
     font-size: 3em;
-    line-height: 40px;
+    line-height: 80px;
 }
 .inner{
     /* padding: 10px 0 10px 10px; */
@@ -103,24 +109,88 @@ ul, ol{
     position: absolute;
     right: 10px;
     top: 0;
-}
-.inner div{
-    transition: 0.5s;
+    z-index: 2;
 }
 .inner div>span{
-    margin: 30px 0 30px 60px;
+    margin: 30px;
     display: flex;
     font-size: 1.8em;
     color: rgb(81, 81, 81) ;
+    transition: 0.5s;
 }
-.inner div:hover{
+.head .sou{
+    position: absolute;
+    top: 19px;
+    left: -190px;
+    display: flex;
+    width: 200px;
+    height: 60%;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: translateX(200px);
+    opacity: 0;
+}
+.head .sou input{
+    width: 80%;
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.2); 
+    font-size: 1em;
+    padding: 0 10px;
+}
+.head .sou input::-webkit-input-placeholder{
+    color: blueviolet;
+}
+.head .sou button{
+    width: 20%;
+    background: rgba(255, 255, 255, 0.2);
+}
+.head .sou button>span{
+    font-size: 1.8em;
+    color: blueviolet;
+}
+.inner .sousuo:hover .sou{
+    transform: translateX(0);
+}
+.inner .sousuo:hover .sou{
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+.head .wei{
+    position: absolute;
+    background-color: red;
+    top: 1px;
+    left: -90px;
+    display: flex;
+    width: 90px;
+    height: 90px;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 3px;
+    overflow: hidden;
+    transform: translateX(200px);
+    opacity: 0;
+}
+.head .wei img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.inner .weixin:hover .wei{
+    transform: translateX(0);
+}
+.inner .weixin:hover .wei{
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+.inner span:hover{
     transform: scale(1.5);
 }
 
-
 .head_button{
     position: relative;
-    top: 180px;
+    top: 170px;
     margin: auto;
     height: 70px;
     width: 1200px;
@@ -134,9 +204,13 @@ ul, ol{
     padding: 0 20px;
     font-size: 1.2em;
     float: left;
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    background: rgba(255, 255, 255,0.5);
     border-radius: 5px;
     box-sizing: border-box;
+}
+.head_button input::-webkit-input-placeholder{
+    color: blueviolet;
 }
 .input_right{
     width: 800px;
@@ -177,6 +251,7 @@ ul, ol{
 }
 .input_right ul>li:hover .sub_nav_div{
     display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 .sub_nav_div{
     width: 800px;
