@@ -17,16 +17,17 @@ ul, ol{
     list-style: none;
 }
 
+/* top start */
+/* ************************************************************* */
 /* background start */
 .top{
+    /* display: none; */
     position: relative;
     width: 100%;
     min-width: 1000px;
     height: 850px;
     top: 0;
     left: 0;
-    /* z-index: -10; */
-    /* background:url(https://images.pexels.com/photos/1400136/pexels-photo-1400136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); */
     animation: move 30s linear infinite;
     -webkit-animation: move 30s linear infinite;
     /* move：动画名称。infinite：代表执行次数，这里指无限次 */
@@ -102,7 +103,6 @@ ul, ol{
     line-height: 80px;
 }
 .inner{
-    /* padding: 10px 0 10px 10px; */
     flex: 1;
     display: flex;
     margin: auto;
@@ -398,13 +398,41 @@ ul, ol{
     transform: translateY(90px);
     transition-delay: 0.4s;
 }
+/* top :end */
+/* ************************************************************ */
 
-
+/* ************************************************************** */
+/* main start */
 .main{
-    margin-top: 10px;
+    margin-top: 150px;
     width: 100%;;
-    background:url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-    height: 300em;
-
-
+    height: 100em;
+    position: relative;
 }
+.main .background{
+    background: url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    height: 550px;
+    width: 100%;
+    /* position: absolute; */
+    z-index: -10;
+}
+.main_left{
+    width: 660px;
+    height: 550px;
+    background-color: #eee;
+    position: absolute;
+    top: -80px;
+    left:160px;
+}
+.main_left 
+.main_right{
+    position: absolute;
+    top: -80px;
+    right: 160px;
+    width: 500px;
+    height: 550px;
+    background-color: #eee;
+}
+
+/* main end */
+/* *************************************************************** */
